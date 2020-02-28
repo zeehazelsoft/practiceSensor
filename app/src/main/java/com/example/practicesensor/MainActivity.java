@@ -147,8 +147,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             double[] vl = velocity.getVlArray();
             for(int i = 0; i<vl.length; i++) {
                 /*Log.d(TAG, "v = " + vl[i] + "mps, "+(vl[i] * 3.6)+ " kmph");*/
-
-
                 //float[] val = values;
                 TableRow row;
                 TextView t1, t2;
@@ -165,19 +163,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 t2 = new TextView(this);
                 t2.setTextColor(Color.WHITE);
                 t2.setBackgroundColor(Color.LTGRAY);
-
-
                 t1.setText(""+vl[i]);
                 t2.setText(""+(vl[i] * 3.6));
-
-
                 t1.setTypeface(null, Typeface.BOLD);
                 t2.setTypeface(null, Typeface.BOLD);
-
-
                 t1.setTextSize(15);
                 t2.setTextSize(15);
-
                 t1.setWidth(200 * dip);
                 t2.setWidth(200 * dip);
 
@@ -239,9 +230,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         fillTable(linearAcceleration);
     }
 }
-
-
-
 class Velocity {
 
     private final String TAG = getClass().getName().toString();
